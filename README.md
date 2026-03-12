@@ -47,8 +47,8 @@ deface:0.0.1
 
 **(optional) Step 3**: debug
 ```
-docker run --rm -it --gpus all
--v <local input folder path:/flywheel/v0/input
--v <local output folder path>:/flywheel/v0/output
+docker run --rm -it --gpus all \
+-v <local input folder path:/flywheel/v0/input \
+-v <local output folder path>:/flywheel/v0/output \
 --entrypoint /bin/bash deface:0.0.1
 ```
