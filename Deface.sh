@@ -71,7 +71,7 @@ fi
 infile=$(find "$INPUT_DIR" -maxdepth 1 -type f -name "*.nii.gz" | head -n 1)
 cp "$infile" "${nnUNet_raw}/Dataset400_HFdefacing/imagesTs/"
 
-echo "\nPrinting input folder contents:"
+echo -e "\nPrinting input folder contents:"
 echo "$(ls -l ${nnUNet_raw}/Dataset400_HFdefacing/imagesTs/)"
 
 nnUNetv2_predict \
@@ -81,5 +81,5 @@ nnUNetv2_predict \
 -d 400 \
 -tr nnUNetTrainerNoMirroring 
 
-echo "Printing output folder contents:"
+echo -e "\nPrinting output folder contents:"
 echo "$(ls -l $OUTPUT_DIR)"
