@@ -13,5 +13,9 @@ config.json
 license.txt
 local-debug.sh
 
-# large project files
-app/nnUNet/
+# large and private project files
+**/*.nii
+**/*.npz
+**/*.pth
+**/*.Identifier
+**/*.json
