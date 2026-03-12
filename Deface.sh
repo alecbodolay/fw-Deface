@@ -74,6 +74,8 @@ cp "$infile" "${nnUNet_raw}/Dataset400_HFdefacing/imagesTs/"
 echo -e "\nPrinting input folder contents:"
 echo "$(ls -l ${nnUNet_raw}/Dataset400_HFdefacing/imagesTs/)"
 
+##############################################################################
+# Step 1 - nnunet Inference
 nnUNetv2_predict \
 -i ${nnUNet_raw}/Dataset400_HFdefacing/imagesTs/ \
 -o $OUTPUT_DIR \
@@ -83,3 +85,12 @@ nnUNetv2_predict \
 
 echo -e "\nPrinting output folder contents:"
 echo "$(ls -l $OUTPUT_DIR)"
+
+##############################################################################
+# Step 2 - masking
+echo -e "\nMasking output"
+
+python $FLYWHEEL_BASE/app/masking.py
+
+echo -e "\nMasked output contents:"
+echo "$(ls -l $OUTPUT_DIR/mask/)"
