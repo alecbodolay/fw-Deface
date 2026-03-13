@@ -1,7 +1,7 @@
 # Defacing based on nnUNetv2
 
 Container for automated MRI defacing using a trained nnUNet model. <br>
-It is designed to run inference on NIfTI volumes (`.nii`,`.nii.gz`) and produce defaced outputs. It is also structured to be implemented as FlyWheel Gear
+It is designed to run inference on *High-Field* NIfTI volumes (`.nii`,`.nii.gz`) and produce defaced outputs. It is also structured to be implemented as FlyWheel Gear
 
 ### Container structure (basic)
 ```

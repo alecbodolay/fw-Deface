@@ -15,7 +15,9 @@ local-debug.sh
 
 # large and private project files
 **/*.nii
+**/*.nii.gz
 **/*.npz
 **/*.pth
 **/*.Identifier
 **/*.json
+**/*.pkl
